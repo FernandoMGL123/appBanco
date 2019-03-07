@@ -1,0 +1,28 @@
+<div class="container">
+    <h3>Registro de Clientes</h3>
+</div>
+<br>
+<button class="btn-primary" (click)="nuevo()"> <i class="fa fa-plus"></i></button>
+<hr>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Saldo</th>
+            <th>Pais</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of lisClientes">
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.edad }}</td>
+            <td>{{ item.saldo }}</td>
+            <td>{{ item.pais }}</td>
+            <td><button class="btn-danger" (click)="Eliminar(item.id)"><i class="fas fa-trash"></i></button>
+                <button class="btn-dark"><i class="fas fa-pencil-alt"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
